@@ -1,0 +1,23 @@
+{
+  "name": "music-library-2023",
+  "version": "1.0.0",
+  "description": "music library project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okori97/music-library.git"
+  },
+  "author": "okori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okori97/music-library/issues"
+  },
+  "homepage": "https://github.com/okori97/music-library#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
