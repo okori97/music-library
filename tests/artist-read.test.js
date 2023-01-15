@@ -29,8 +29,8 @@ describe("Read Artists", () => {
     it("returns all artist records in the database", async () => {
       const { status, body } = await request(app).get("/artists").send();
 
-      console.log(`Status : ${status}`); // prints the status code of the response
-      console.log(`Body : ${body}`); // prints the body of the response
+      // console.log(`Status : ${status}`); // prints the status code of the response
+      // console.log(`Body : ${body}`); // prints the body of the response
 
       expect(status).to.equal(200);
       expect(body.length).to.equal(3);
