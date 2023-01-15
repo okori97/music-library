@@ -74,3 +74,16 @@ exports.updateArtistById = async (req, res) => {
     res.status(500).json(err.message);
   }
 };
+
+exports.deleteArtistById = async (req, res) => {
+  const { id } = req.params;
+  let params = [id];
+  let query = `DELETE FROM Artists WHERE id = $1 RETURNING *`;
+  const {
+    rows: [artist],
+  } = await db.query(query, params);
+  if (!artist) {
+    res.status(404).json({ message: `artist ${id} does not exist` });
+  }
+  res.status(200).json(artist);
+};

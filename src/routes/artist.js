@@ -7,6 +7,7 @@ router.post("/", artistController.createArtist);
 router.get("/", artistController.read);
 router.get("/:id", artistController.getArtistById);
 router.patch("/:id", artistController.updateArtistById);
+router.delete("/:id", artistController.deleteArtistById);
 
 console.log(artistController);
 
